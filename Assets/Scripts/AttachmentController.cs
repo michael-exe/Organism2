@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttachmentController : MonoBehaviour
+    //really: HolderController
 {
-    //ATTACH_CONTROLLER
+    //DETECTOR(ext)
     public Transform UR_Detector;
     public Transform UL_Detector;
     public Transform DR_Detector;
     public Transform DL_Detector;
+    //HOLDER(int)
     public Transform UR_Holder;
     public Transform UL_Holder;
     public Transform DR_Holder;
     public Transform DL_Holder;
     public GameObject Ext_Molecule;
-    //private List<Transform> Int_Molecules;
     private List<Transform> Int_Molecules;
-    //above should be private
     public Transform Int_MoleculePrefab;
 
     private void Start()
     {
-        //ATTACH_CONTROLLER
+        //HOLDER(int)
         Int_Molecules = new List<Transform>();
         Int_Molecules.Add(this.transform);
     }
@@ -29,23 +29,24 @@ public class AttachmentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //ATTACH_CONTROLLER
+        //DETECTOR(ext)
         UR_Attach();
         UL_Attach();
         DR_Attach();
         DL_Attach();
     }
 
-    //ATTACH_CONTROLLER
+    //DETECTOR(ext) referencing HOLDER(int)
     private void UR_Attach()
     {
         RaycastHit2D attachCheck = Physics2D.Raycast(UR_Detector.position, Vector2.one * transform.localScale, 0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Ext_Molecule")
+        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = UR_Holder;
             //attachCheck.collider.gameObject.transform.position = UR_Holder.position;
-            Destroy(attachCheck.collider.gameObject);
+            //Destroy(attachCheck.collider.gameObject);
+            Destroy(Ext_Molecule);
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UR_Holder;
             Int_Molecule_Inst.transform.position = UR_Holder.position;
@@ -60,12 +61,12 @@ public class AttachmentController : MonoBehaviour
     {
         RaycastHit2D attachCheck = Physics2D.Raycast(UL_Detector.position, Vector2.one * transform.localScale, -0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Ext_Molecule")
+        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = UL_Holder;
             //attachCheck.collider.gameObject.transform.position = UL_Holder.position;
             //Destroy(Ext_Molecule);
-            Destroy(attachCheck.collider.gameObject);
+            //Destroy(attachCheck.collider.gameObject);
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UL_Holder;
             Int_Molecule_Inst.transform.position = UL_Holder.position;
@@ -80,13 +81,13 @@ public class AttachmentController : MonoBehaviour
     {
         RaycastHit2D attachCheck = Physics2D.Raycast(DR_Detector.position, Vector2.one * transform.localScale, 0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Ext_Molecule")
+        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = DR_Holder;
             //attachCheck.collider.gameObject.transform.position = DR_Holder.position;
             //Destroy(Ext_Molecule);
             //Destroy(GameObject.FindWithTag("Ext_Molecule"));
-            Destroy(attachCheck.collider.gameObject);
+            //Destroy(attachCheck.collider.gameObject);
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = DR_Holder;
             Int_Molecule_Inst.transform.position = DR_Holder.position;
@@ -101,12 +102,12 @@ public class AttachmentController : MonoBehaviour
     {
         RaycastHit2D attachCheck = Physics2D.Raycast(DL_Detector.position, Vector2.one * transform.localScale, -0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Ext_Molecule")
+        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = DL_Holder;
             //attachCheck.collider.gameObject.transform.position = DL_Holder.position;
             //Destroy(Ext_Molecule);
-            Destroy(attachCheck.collider.gameObject);
+            //Destroy(attachCheck.collider.gameObject);
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = DL_Holder;
             Int_Molecule_Inst.transform.position = DL_Holder.position;
