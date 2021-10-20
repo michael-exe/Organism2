@@ -18,6 +18,7 @@ public class AttachmentController : MonoBehaviour
     public GameObject Ext_Molecule;
     private List<Transform> Int_Molecules;
     public Transform Int_MoleculePrefab;
+    private Collision other;
 
     private void Start()
     {
@@ -39,29 +40,34 @@ public class AttachmentController : MonoBehaviour
     //DETECTOR(ext) referencing HOLDER(int)
     private void UR_Attach()
     {
-        RaycastHit2D attachCheck = Physics2D.Raycast(UR_Detector.position, Vector2.one * transform.localScale, 0);
+        RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.one * transform.localScale, 0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = UR_Holder;
             //attachCheck.collider.gameObject.transform.position = UR_Holder.position;
             //Destroy(attachCheck.collider.gameObject);
-            Destroy(Ext_Molecule);
-            Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
-            Int_Molecule_Inst.transform.parent = UR_Holder;
-            Int_Molecule_Inst.transform.position = UR_Holder.position;
+
+            if (other.gameObject.name == "Ext_Molecule")
+            {
+                Destroy(other.gameObject);
+            }
+
+            //Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
+            //Int_Molecule_Inst.transform.parent = UR_Holder;
+            //Int_Molecule_Inst.transform.position = UR_Holder.position;
 
             if (Input.GetKey(KeyCode.X))
             {
-                attachCheck.collider.gameObject.transform.parent = null;
+                Ext2Int.collider.gameObject.transform.parent = null;
             }
         }
     }
     private void UL_Attach()
     {
-        RaycastHit2D attachCheck = Physics2D.Raycast(UL_Detector.position, Vector2.one * transform.localScale, -0);
+        RaycastHit2D Ext2Int = Physics2D.Raycast(UL_Detector.position, Vector2.one * transform.localScale, -0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = UL_Holder;
             //attachCheck.collider.gameObject.transform.position = UL_Holder.position;
@@ -73,15 +79,15 @@ public class AttachmentController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.X))
             {
-                attachCheck.collider.gameObject.transform.parent = null;
+                Ext2Int.collider.gameObject.transform.parent = null;
             }
         }
     }
     private void DR_Attach()
     {
-        RaycastHit2D attachCheck = Physics2D.Raycast(DR_Detector.position, Vector2.one * transform.localScale, 0);
+        RaycastHit2D Ext2Int = Physics2D.Raycast(DR_Detector.position, Vector2.one * transform.localScale, 0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = DR_Holder;
             //attachCheck.collider.gameObject.transform.position = DR_Holder.position;
@@ -94,15 +100,15 @@ public class AttachmentController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.X))
             {
-                attachCheck.collider.gameObject.transform.parent = null;
+                Ext2Int.collider.gameObject.transform.parent = null;
             }
         }
     }
     private void DL_Attach()
     {
-        RaycastHit2D attachCheck = Physics2D.Raycast(DL_Detector.position, Vector2.one * transform.localScale, -0);
+        RaycastHit2D Ext2Int = Physics2D.Raycast(DL_Detector.position, Vector2.one * transform.localScale, -0);
 
-        if (attachCheck.collider != null && attachCheck.collider.tag == "Int_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
         {
             //attachCheck.collider.gameObject.transform.parent = DL_Holder;
             //attachCheck.collider.gameObject.transform.position = DL_Holder.position;
@@ -114,11 +120,17 @@ public class AttachmentController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.X))
             {
-                attachCheck.collider.gameObject.transform.parent = null;
+                Ext2Int.collider.gameObject.transform.parent = null;
             }
         }
     }
-
+    private void OnCollisionEnter(Collision other)
+            {
+        if( other.gameObject.name == "Ext_Molecule")
+        {
+            Destroy(other.gameObject);
+        }
+            }
     private void AttachersInstantiation()
     {
         //Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
