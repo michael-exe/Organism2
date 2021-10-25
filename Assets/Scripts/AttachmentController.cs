@@ -35,6 +35,8 @@ public class AttachmentController : MonoBehaviour
         UL_Attach();
         DR_Attach();
         DL_Attach();
+
+        
     }
 
     //DETECTOR(ext) referencing HOLDER(int)
@@ -44,18 +46,11 @@ public class AttachmentController : MonoBehaviour
 
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
         {
-            //attachCheck.collider.gameObject.transform.parent = UR_Holder;
-            //attachCheck.collider.gameObject.transform.position = UR_Holder.position;
-            //Destroy(attachCheck.collider.gameObject);
 
-            if (other.gameObject.name == "Ext_Molecule")
-            {
-                Destroy(other.gameObject);
-            }
-
-            //Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
-            //Int_Molecule_Inst.transform.parent = UR_Holder;
-            //Int_Molecule_Inst.transform.position = UR_Holder.position;
+            Destroy(Ext_Molecule);
+            Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
+            Int_Molecule_Inst.transform.parent = UR_Holder;
+            Int_Molecule_Inst.transform.position = UR_Holder.position;
 
             if (Input.GetKey(KeyCode.X))
             {
@@ -71,8 +66,6 @@ public class AttachmentController : MonoBehaviour
         {
             //attachCheck.collider.gameObject.transform.parent = UL_Holder;
             //attachCheck.collider.gameObject.transform.position = UL_Holder.position;
-            //Destroy(Ext_Molecule);
-            //Destroy(attachCheck.collider.gameObject);
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UL_Holder;
             Int_Molecule_Inst.transform.position = UL_Holder.position;
@@ -92,8 +85,7 @@ public class AttachmentController : MonoBehaviour
             //attachCheck.collider.gameObject.transform.parent = DR_Holder;
             //attachCheck.collider.gameObject.transform.position = DR_Holder.position;
             //Destroy(Ext_Molecule);
-            //Destroy(GameObject.FindWithTag("Ext_Molecule"));
-            //Destroy(attachCheck.collider.gameObject);
+
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = DR_Holder;
             Int_Molecule_Inst.transform.position = DR_Holder.position;
@@ -112,8 +104,7 @@ public class AttachmentController : MonoBehaviour
         {
             //attachCheck.collider.gameObject.transform.parent = DL_Holder;
             //attachCheck.collider.gameObject.transform.position = DL_Holder.position;
-            //Destroy(Ext_Molecule);
-            //Destroy(attachCheck.collider.gameObject);
+
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = DL_Holder;
             Int_Molecule_Inst.transform.position = DL_Holder.position;
@@ -124,13 +115,8 @@ public class AttachmentController : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter(Collision other)
-            {
-        if( other.gameObject.name == "Ext_Molecule")
-        {
-            Destroy(other.gameObject);
-        }
-            }
+
+ 
     private void AttachersInstantiation()
     {
         //Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
