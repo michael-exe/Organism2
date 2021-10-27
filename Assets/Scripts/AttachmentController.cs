@@ -15,18 +15,13 @@ public class AttachmentController : MonoBehaviour
     public Transform UL_Holder;
     public Transform DR_Holder;
     public Transform DL_Holder;
-    public GameObject Ext_Molecule;
-    private List<Transform> Int_Molecules;
     public Transform Int_MoleculePrefab;
-    private Collision other;
 
-    bool hit;
+    //bool hit;
 
     private void Start()
     {
-        //HOLDER(int)
-        Int_Molecules = new List<Transform>();
-        Int_Molecules.Add(this.transform);
+        
     }
 
     // Update is called once per frame
@@ -37,8 +32,6 @@ public class AttachmentController : MonoBehaviour
         UL_Attach();
         DR_Attach();
         DL_Attach();
-
-        
     }
 
     //DETECTOR(ext) referencing HOLDER(int)
@@ -51,11 +44,8 @@ public class AttachmentController : MonoBehaviour
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {
             Ext2Int.collider.gameObject.tag = "Untagged";
-           Destroy(Ext2Int.collider.gameObject);
-          
-
-          //  Destroy(Ext_Molecule);
-            //Destroy(Ext2Int.collider.gameObject);
+            Destroy(Ext2Int.collider.gameObject);
+         
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UR_Holder;
             Int_Molecule_Inst.transform.position = UR_Holder.position;
@@ -72,12 +62,9 @@ public class AttachmentController : MonoBehaviour
 
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {   
-
-           Ext2Int.collider.gameObject.tag = "Untagged";
+            Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
-            //Destroy(Ext2Int.collider.gameObject);
-            //attachCheck.collider.gameObject.transform.parent = UL_Holder;
-            //attachCheck.collider.gameObject.transform.position = UL_Holder.position;
+            
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UL_Holder;
             Int_Molecule_Inst.transform.position = UL_Holder.position;
@@ -93,13 +80,10 @@ public class AttachmentController : MonoBehaviour
         RaycastHit2D Ext2Int = Physics2D.Raycast(DR_Detector.position, Vector2.zero, 0);
 
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
-        { Ext2Int.collider.gameObject.tag = "Untagged";
+        { 
+            Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
-           //Destroy(Ext2Int.collider.gameObject);
-            //attachCheck.collider.gameObject.transform.parent = DR_Holder;
-            //attachCheck.collider.gameObject.transform.position = DR_Holder.position;
-            //Destroy(Ext_Molecule);
-
+           
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = DR_Holder;
             Int_Molecule_Inst.transform.position = DR_Holder.position;
@@ -116,13 +100,10 @@ public class AttachmentController : MonoBehaviour
         RaycastHit2D Ext2Int = Physics2D.Raycast(DL_Detector.position, Vector2.zero, 0);
 
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
-        { Ext2Int.collider.gameObject.tag = "Untagged";
-             Destroy(Ext2Int.collider.gameObject);
+        {             
+            Ext2Int.collider.gameObject.tag = "Untagged";
+            Destroy(Ext2Int.collider.gameObject);
            
-         //   Destroy(Ext2Int.collider.gameObject);
-            //attachCheck.collider.gameObject.transform.parent = DL_Holder;
-            //attachCheck.collider.gameObject.transform.position = DL_Holder.position;
-
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = DL_Holder;
             Int_Molecule_Inst.transform.position = DL_Holder.position;
@@ -134,14 +115,6 @@ public class AttachmentController : MonoBehaviour
         }
     }
 
- 
-    private void AttachersInstantiation()
-    {
-        //Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
-        //Int_Molecule_Inst.position = UR_Holder.position;
-        ////Int_Molecule_Inst.position = Int_Molecules[Int_Molecules.Count - 1].position;
-        //Int_Molecules.Add(Int_Molecule_Inst);
-    }
     //https://youtu.be/U8gUnpeaMbQ Snake
     //https://youtu.be/1uq43EIzo-U Grab
     //https://youtu.be/cIeWhztKyAg Asteroids
