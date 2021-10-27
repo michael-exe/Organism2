@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttachmentController : MonoBehaviour
     //really: HolderController
 {
-    //DETECTOR(ext)
+    //DETECTOR(ext) 
     public Transform UR_Detector;
     public Transform UL_Detector;
     public Transform DR_Detector;
@@ -19,6 +19,8 @@ public class AttachmentController : MonoBehaviour
     private List<Transform> Int_Molecules;
     public Transform Int_MoleculePrefab;
     private Collision other;
+
+    bool hit;
 
     private void Start()
     {
@@ -42,12 +44,18 @@ public class AttachmentController : MonoBehaviour
     //DETECTOR(ext) referencing HOLDER(int)
     private void UR_Attach()
     {
-        RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.one * transform.localScale, 0);
+        
+        RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
+
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {
+            Ext2Int.collider.gameObject.tag = "Untagged";
+           Destroy(Ext2Int.collider.gameObject);
+          
 
-            Destroy(Ext_Molecule);
+          //  Destroy(Ext_Molecule);
+            //Destroy(Ext2Int.collider.gameObject);
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UR_Holder;
             Int_Molecule_Inst.transform.position = UR_Holder.position;
@@ -60,10 +68,14 @@ public class AttachmentController : MonoBehaviour
     }
     private void UL_Attach()
     {
-        RaycastHit2D Ext2Int = Physics2D.Raycast(UL_Detector.position, Vector2.one * transform.localScale, -0);
+        RaycastHit2D Ext2Int = Physics2D.Raycast(UL_Detector.position,Vector2.zero, -0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
-        {
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        {   
+
+           Ext2Int.collider.gameObject.tag = "Untagged";
+            Destroy(Ext2Int.collider.gameObject);
+            //Destroy(Ext2Int.collider.gameObject);
             //attachCheck.collider.gameObject.transform.parent = UL_Holder;
             //attachCheck.collider.gameObject.transform.position = UL_Holder.position;
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
@@ -78,10 +90,12 @@ public class AttachmentController : MonoBehaviour
     }
     private void DR_Attach()
     {
-        RaycastHit2D Ext2Int = Physics2D.Raycast(DR_Detector.position, Vector2.one * transform.localScale, 0);
+        RaycastHit2D Ext2Int = Physics2D.Raycast(DR_Detector.position, Vector2.zero, 0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
-        {
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        { Ext2Int.collider.gameObject.tag = "Untagged";
+            Destroy(Ext2Int.collider.gameObject);
+           //Destroy(Ext2Int.collider.gameObject);
             //attachCheck.collider.gameObject.transform.parent = DR_Holder;
             //attachCheck.collider.gameObject.transform.position = DR_Holder.position;
             //Destroy(Ext_Molecule);
@@ -98,10 +112,14 @@ public class AttachmentController : MonoBehaviour
     }
     private void DL_Attach()
     {
-        RaycastHit2D Ext2Int = Physics2D.Raycast(DL_Detector.position, Vector2.one * transform.localScale, -0);
+       
+        RaycastHit2D Ext2Int = Physics2D.Raycast(DL_Detector.position, Vector2.zero, 0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Int_Molecule")
-        {
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        { Ext2Int.collider.gameObject.tag = "Untagged";
+             Destroy(Ext2Int.collider.gameObject);
+           
+         //   Destroy(Ext2Int.collider.gameObject);
             //attachCheck.collider.gameObject.transform.parent = DL_Holder;
             //attachCheck.collider.gameObject.transform.position = DL_Holder.position;
 

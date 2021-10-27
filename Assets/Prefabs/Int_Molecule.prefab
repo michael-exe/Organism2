@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 731569198607375900}
   - component: {fileID: 2991305218805544473}
   - component: {fileID: 5172977452043305358}
+  - component: {fileID: 1869869035208250384}
   m_Layer: 0
   m_Name: Int_Molecule
   m_TagString: Int_Molecule
@@ -112,6 +113,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1869869035208250384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012636175704176919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a61f8af8a5c3144da9f82108c11a7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UR_Detector: {fileID: 5353638095392970697}
+  UL_Detector: {fileID: 5353638095427963670}
+  DR_Detector: {fileID: 5353638095459369269}
+  DL_Detector: {fileID: 5353638096394994028}
+  UR_Holder: {fileID: 5353638095392970697}
+  UL_Holder: {fileID: 5353638095427963670}
+  DR_Holder: {fileID: 5353638095459369269}
+  DL_Holder: {fileID: 5353638096394994028}
+  Ext_Molecule: {fileID: 0}
+  Int_MoleculePrefab: {fileID: 731569198607375900}
 --- !u!1 &5353638094923785107
 GameObject:
   m_ObjectHideFlags: 0
