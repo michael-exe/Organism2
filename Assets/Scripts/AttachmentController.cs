@@ -50,10 +50,11 @@ public class AttachmentController : MonoBehaviour
             Int_Molecule_Inst.transform.parent = UR_Holder;
             Int_Molecule_Inst.transform.position = UR_Holder.position;
 
-            if (Input.GetKey(KeyCode.X))
-            {
-                Ext2Int.collider.gameObject.transform.parent = null;
-            }
+        }
+        
+        if (Input.GetKey(KeyCode.X))
+        {
+            Ext2Int.collider.gameObject.transform.parent = null;
         }
     }
     private void UL_Attach()
@@ -68,11 +69,11 @@ public class AttachmentController : MonoBehaviour
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UL_Holder;
             Int_Molecule_Inst.transform.position = UL_Holder.position;
-
-            if (Input.GetKey(KeyCode.X))
-            {
-                Ext2Int.collider.gameObject.transform.parent = null;
-            }
+        }
+        
+        if (Input.GetKey(KeyCode.X))
+        {
+            Ext2Int.collider.gameObject.transform.parent = null;
         }
     }
     private void DR_Attach()
@@ -88,10 +89,11 @@ public class AttachmentController : MonoBehaviour
             Int_Molecule_Inst.transform.parent = DR_Holder;
             Int_Molecule_Inst.transform.position = DR_Holder.position;
 
-            if (Input.GetKey(KeyCode.X))
-            {
-                Ext2Int.collider.gameObject.transform.parent = null;
-            }
+        }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            Ext2Int.collider.gameObject.transform.parent = null;
         }
     }
     private void DL_Attach()
@@ -108,10 +110,11 @@ public class AttachmentController : MonoBehaviour
             Int_Molecule_Inst.transform.parent = DL_Holder;
             Int_Molecule_Inst.transform.position = DL_Holder.position;
 
-            if (Input.GetKey(KeyCode.X))
-            {
-                Ext2Int.collider.gameObject.transform.parent = null;
-            }
+        }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            Ext2Int.collider.gameObject.transform.parent = null;
         }
     }
 
