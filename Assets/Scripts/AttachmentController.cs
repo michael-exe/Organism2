@@ -16,6 +16,8 @@ public class AttachmentController : MonoBehaviour
     public Transform DR_Holder;
     public Transform DL_Holder;
     public Transform Int_MoleculePrefab;
+    private bool returnal;
+    bool continue_checking;
 
     //bool hit;
 
@@ -28,18 +30,27 @@ public class AttachmentController : MonoBehaviour
     void Update()
     {
         //DETECTOR(ext)
+        continue_checking = true;
         UR_Attach();
         UL_Attach();
         DR_Attach();
         DL_Attach();
-    }
+
+        if (continue_checking)
+        {
+            continue_checking &=! UR_Attach();
+            continue_checking &=! UL_Attach();
+            continue_checking &=! DR_Attach();
+            continue_checking &=! DL_Attach();
+        }
 
     //DETECTOR(ext) referencing HOLDER(int)
-    private void UR_Attach()
+    bool UR_Attach()
     {
         
-        RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
 
+        RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
+        
 
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {
@@ -50,14 +61,22 @@ public class AttachmentController : MonoBehaviour
             Int_Molecule_Inst.transform.parent = UR_Holder;
             Int_Molecule_Inst.transform.position = UR_Holder.position;
 
+            Debug.Log("UR_Attach");
+
+            return true;
+        }
+
+        else
+        {
+            return false;
         }
         
-        if (Input.GetKey(KeyCode.X))
-        {
-            Ext2Int.collider.gameObject.transform.parent = null;
-        }
+        //if (Input.GetKey(KeyCode.X))
+        //{
+        //    Ext2Int.collider.gameObject.transform.parent = null;
+        //}
     }
-    private void UL_Attach()
+    bool UL_Attach()
     {
         RaycastHit2D Ext2Int = Physics2D.Raycast(UL_Detector.position,Vector2.zero, -0);
 
@@ -69,14 +88,23 @@ public class AttachmentController : MonoBehaviour
             Transform Int_Molecule_Inst = Instantiate(this.Int_MoleculePrefab);
             Int_Molecule_Inst.transform.parent = UL_Holder;
             Int_Molecule_Inst.transform.position = UL_Holder.position;
+
+            Debug.Log("UL_Attach");
+
+            return true;
         }
-        
-        if (Input.GetKey(KeyCode.X))
+
+        else
         {
-            Ext2Int.collider.gameObject.transform.parent = null;
+            return false;
         }
+
+        //if (Input.GetKey(KeyCode.X))
+        //{
+        //    Ext2Int.collider.gameObject.transform.parent = null;
+        //}
     }
-    private void DR_Attach()
+    bool DR_Attach()
     {
         RaycastHit2D Ext2Int = Physics2D.Raycast(DR_Detector.position, Vector2.zero, 0);
 
@@ -89,19 +117,27 @@ public class AttachmentController : MonoBehaviour
             Int_Molecule_Inst.transform.parent = DR_Holder;
             Int_Molecule_Inst.transform.position = DR_Holder.position;
 
+            Debug.Log("DR_Attach");
+
+            return true;
         }
 
-        if (Input.GetKey(KeyCode.X))
+        else
         {
-            Ext2Int.collider.gameObject.transform.parent = null;
+            return false;
         }
+
+        //if (Input.GetKey(KeyCode.X))
+        //{
+        //    Ext2Int.collider.gameObject.transform.parent = null;
+        //}
     }
-    private void DL_Attach()
+    bool DL_Attach()
     {
        
         RaycastHit2D Ext2Int = Physics2D.Raycast(DL_Detector.position, Vector2.zero, 0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule" && returnal == false)
         {             
             Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
@@ -110,13 +146,24 @@ public class AttachmentController : MonoBehaviour
             Int_Molecule_Inst.transform.parent = DL_Holder;
             Int_Molecule_Inst.transform.position = DL_Holder.position;
 
+            Debug.Log("DL_Attach");
+
+            return true;
         }
 
-        if (Input.GetKey(KeyCode.X))
+        else
         {
-            Ext2Int.collider.gameObject.transform.parent = null;
+            return false;
         }
+
+        //if (Input.GetKey(KeyCode.X))
+        //{
+        //    Ext2Int.collider.gameObject.transform.parent = null;
+        //}
+
     }
+
+}
 
     //https://youtu.be/U8gUnpeaMbQ Snake
     //https://youtu.be/1uq43EIzo-U Grab

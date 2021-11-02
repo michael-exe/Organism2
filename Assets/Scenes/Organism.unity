@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245617653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DL_Holder
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -1324,28 +1324,6 @@ Transform:
   m_Father: {fileID: 345751542}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1314456090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071461501801737102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a61f8af8a5c3144da9f82108c11a7be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UR_Detector: {fileID: 1926825296}
-  UL_Detector: {fileID: 1959205263}
-  DR_Detector: {fileID: 1994806188}
-  DL_Detector: {fileID: 245617653}
-  UR_Holder: {fileID: 1926825296}
-  UL_Holder: {fileID: 1959205263}
-  DR_Holder: {fileID: 1994806188}
-  DL_Holder: {fileID: 245617653}
-  Ext_Molecule: {fileID: 117309985}
-  Int_MoleculePrefab: {fileID: 731569198607375900, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
 --- !u!1 &1369478780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1926825296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UR_Holder
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -2285,7 +2263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959205263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UL_Holder
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -2459,7 +2437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994806188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DR_Holder
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -2585,7 +2563,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9071461501801737102}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -2682,7 +2660,7 @@ GameObject:
   - component: {fileID: 4642365917712387205}
   - component: {fileID: 7190191713473897600}
   - component: {fileID: 973317302765818647}
-  - component: {fileID: 1314456090}
+  - component: {fileID: 9071461501801737103}
   m_Layer: 0
   m_Name: Int_Molecule
   m_TagString: Int_Molecule
@@ -2690,3 +2668,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9071461501801737103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071461501801737102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a61f8af8a5c3144da9f82108c11a7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UR_Detector: {fileID: 1926825296}
+  UL_Detector: {fileID: 1959205263}
+  DR_Detector: {fileID: 1994806188}
+  DL_Detector: {fileID: 245617653}
+  UR_Holder: {fileID: 1926825296}
+  UL_Holder: {fileID: 1959205263}
+  DR_Holder: {fileID: 1994806188}
+  DL_Holder: {fileID: 245617653}
+  Int_MoleculePrefab: {fileID: 4642365917712387205}
