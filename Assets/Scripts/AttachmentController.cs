@@ -24,24 +24,19 @@ public class AttachmentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //DETECTOR(ext)
-        
+        //DETECTOR(ext)        
         UR_Attach();
         UL_Attach();
         DR_Attach();
         DL_Attach();
-
     }
 
     //DETECTOR(ext) referencing HOLDER(int)
     void UR_Attach()
     {
-        
-
         RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
         //Not really Ext2Int anymore
         
-
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {
             //Destroy(Ext2Int.collider.gameObject);
@@ -84,10 +79,9 @@ public class AttachmentController : MonoBehaviour
             Ext2Int.collider.gameObject.transform.position = DL_Holder.position;
             Ext2Int.collider.gameObject.tag = "Int_Molecule";
         }
-
     }
-
 }
-    //https://youtu.be/U8gUnpeaMbQ Snake
-    //https://youtu.be/1uq43EIzo-U Grab
-    //https://youtu.be/cIeWhztKyAg Asteroids
+//https://youtu.be/U8gUnpeaMbQ Snake
+//https://youtu.be/1uq43EIzo-U Grab
+//https://youtu.be/cIeWhztKyAg Asteroids
+//https://answers.unity.com/questions/1455956/using-function-return-in-if-statement.html 
