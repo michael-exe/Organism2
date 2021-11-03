@@ -36,13 +36,11 @@ public class AttachmentController : MonoBehaviour
         DR_Attach();
         DL_Attach();
 
-        if (continue_checking)
-        {
-            continue_checking &=! UR_Attach();
-            continue_checking &=! UL_Attach();
-            continue_checking &=! DR_Attach();
-            continue_checking &=! DL_Attach();
-        }
+        //if (continue_checking) { continue_checking &= !UR_Attach(); }
+        //if (continue_checking) { continue_checking &= !UL_Attach(); }
+        //if (continue_checking) { continue_checking &= !DR_Attach(); }
+        //if (continue_checking) { continue_checking &= !DL_Attach(); }
+    }
 
     //DETECTOR(ext) referencing HOLDER(int)
     bool UR_Attach()
@@ -63,12 +61,12 @@ public class AttachmentController : MonoBehaviour
 
             Debug.Log("UR_Attach");
 
-            return true;
+            return false;
         }
 
         else
         {
-            return false;
+            return true;
         }
         
         //if (Input.GetKey(KeyCode.X))
@@ -91,12 +89,12 @@ public class AttachmentController : MonoBehaviour
 
             Debug.Log("UL_Attach");
 
-            return true;
+            return false;
         }
 
         else
         {
-            return false;
+            return true;
         }
 
         //if (Input.GetKey(KeyCode.X))
@@ -119,12 +117,12 @@ public class AttachmentController : MonoBehaviour
 
             Debug.Log("DR_Attach");
 
-            return true;
+            return false;
         }
 
         else
         {
-            return false;
+            return true;
         }
 
         //if (Input.GetKey(KeyCode.X))
@@ -148,12 +146,12 @@ public class AttachmentController : MonoBehaviour
 
             Debug.Log("DL_Attach");
 
-            return true;
+            return false;
         }
 
         else
         {
-            return false;
+            return true;
         }
 
         //if (Input.GetKey(KeyCode.X))
@@ -164,8 +162,6 @@ public class AttachmentController : MonoBehaviour
     }
 
 }
-
     //https://youtu.be/U8gUnpeaMbQ Snake
     //https://youtu.be/1uq43EIzo-U Grab
     //https://youtu.be/cIeWhztKyAg Asteroids
-}
