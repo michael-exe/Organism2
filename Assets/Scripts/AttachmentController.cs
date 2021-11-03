@@ -18,6 +18,7 @@ public class AttachmentController : MonoBehaviour
     public Transform Int_MoleculePrefab;
     private bool returnal;
     bool continue_checking;
+    int spawnCount;
 
     //bool hit;
 
@@ -30,16 +31,20 @@ public class AttachmentController : MonoBehaviour
     void Update()
     {
         //DETECTOR(ext)
-        continue_checking = true;
+        
         UR_Attach();
         UL_Attach();
         DR_Attach();
         DL_Attach();
+        continue_checking = true;
 
-        //if (continue_checking) { continue_checking &= !UR_Attach(); }
-        //if (continue_checking) { continue_checking &= !UL_Attach(); }
-        //if (continue_checking) { continue_checking &= !DR_Attach(); }
-        //if (continue_checking) { continue_checking &= !DL_Attach(); }
+        //if (continue_checking)
+        //{
+        //    continue_checking &= !UR_Attach();
+        //    continue_checking &= !UL_Attach();
+        //    continue_checking &= !DR_Attach();
+        //    continue_checking &= !DL_Attach();
+        //}
     }
 
     //DETECTOR(ext) referencing HOLDER(int)
@@ -50,7 +55,7 @@ public class AttachmentController : MonoBehaviour
         RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
         
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule" && continue_checking == true)
         {
             Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
@@ -78,7 +83,7 @@ public class AttachmentController : MonoBehaviour
     {
         RaycastHit2D Ext2Int = Physics2D.Raycast(UL_Detector.position,Vector2.zero, -0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule" && continue_checking == true)
         {   
             Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
@@ -106,7 +111,7 @@ public class AttachmentController : MonoBehaviour
     {
         RaycastHit2D Ext2Int = Physics2D.Raycast(DR_Detector.position, Vector2.zero, 0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule" && continue_checking == true)
         { 
             Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
@@ -135,7 +140,7 @@ public class AttachmentController : MonoBehaviour
        
         RaycastHit2D Ext2Int = Physics2D.Raycast(DL_Detector.position, Vector2.zero, 0);
 
-        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule" && returnal == false)
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule" && continue_checking == true)
         {             
             Ext2Int.collider.gameObject.tag = "Untagged";
             Destroy(Ext2Int.collider.gameObject);
