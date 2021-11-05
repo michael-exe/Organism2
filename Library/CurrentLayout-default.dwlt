@@ -40,7 +40,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 364
+=======
+    x: 366
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     x: 366
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -70,9 +74,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 872
     y: 0
     width: 633
+=======
+    x: 874
+    y: 0
+    width: 631
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     x: 874
     y: 0
@@ -111,7 +121,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16006, y: 8042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 80
+=======
+  controlID: 17
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
   controlID: 17
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -160,7 +174,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 364
+=======
+    width: 366
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     width: 366
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -295,7 +313,11 @@ MonoBehaviour:
   m_MaxSize: {x: 12005, y: 8042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 57
+=======
+  controlID: 102
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
   controlID: 102
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -325,7 +347,11 @@ MonoBehaviour:
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 58
+=======
+  controlID: 103
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
   controlID: 103
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -433,9 +459,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 084d0000
     m_LastClickedID: 19720
     m_ExpandedIDs: 00000000fc4c000000ca9a3b
+=======
+    m_SelectedIDs: ce4c0000
+    m_LastClickedID: 19662
+    m_ExpandedIDs: 00000000c24c0000
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     m_SelectedIDs: ce4c0000
     m_LastClickedID: 19662
@@ -469,7 +501,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000fc4c0000
+=======
+    m_ExpandedIDs: 00000000c24c0000
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     m_ExpandedIDs: 00000000c24c0000
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -498,10 +534,13 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
 =======
+=======
+>>>>>>> parent of 7865c4c (Clean-up)
     m_SelectedInstanceIDs: ca060000
     m_LastClickedInstanceID: 1738
     m_HadKeyboardFocusLastEvent: 1
@@ -595,7 +634,11 @@ MonoBehaviour:
     x: 0
     y: 73
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 363
+=======
+    width: 365
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     width: 365
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -605,9 +648,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 964c0000
       m_LastClickedID: 19606
       m_ExpandedIDs: 28fbffff784c0000ca4c0000
+=======
+      m_SelectedIDs: 8a4c0000
+      m_LastClickedID: 19594
+      m_ExpandedIDs: 1edcffff20dcffffd8efffffdeefffff5af0ffff60f0ffff42fbffffa04b0000c04b0000e04b0000384c00008a4c0000
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
       m_SelectedIDs: 8a4c0000
       m_LastClickedID: 19594
@@ -657,7 +706,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 364
+=======
+    x: 366
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     x: 366
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -777,9 +830,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 872
     y: 73
     width: 631
+=======
+    x: 874
+    y: 73
+    width: 629
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     x: 874
     y: 73
@@ -794,7 +853,11 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 631, y: 507}
+=======
+  m_TargetSize: {x: 629, y: 507}
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
   m_TargetSize: {x: 629, y: 507}
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -813,8 +876,13 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -315.5
     m_HBaseRangeMax: 315.5
+=======
+    m_HBaseRangeMin: -314.5
+    m_HBaseRangeMax: 314.5
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     m_HBaseRangeMin: -314.5
     m_HBaseRangeMax: 314.5
@@ -839,15 +907,21 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 631
       height: 507
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 315.5, y: 253.5}
 =======
+=======
+>>>>>>> parent of 7865c4c (Clean-up)
       width: 629
       height: 507
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 314.5, y: 253.5}
+<<<<<<< HEAD
+>>>>>>> parent of 7865c4c (Clean-up)
+=======
 >>>>>>> parent of 7865c4c (Clean-up)
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -855,6 +929,7 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -315.5
       y: -253.5
@@ -864,6 +939,8 @@ MonoBehaviour:
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 631, y: 528}
 =======
+=======
+>>>>>>> parent of 7865c4c (Clean-up)
       x: -314.5
       y: -253.5
       width: 629
@@ -871,6 +948,9 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 629, y: 528}
+<<<<<<< HEAD
+>>>>>>> parent of 7865c4c (Clean-up)
+=======
 >>>>>>> parent of 7865c4c (Clean-up)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1

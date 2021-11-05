@@ -340,4 +340,7 @@
 {"msg":"inputSignatureChanged","annotation":"CopyTool Library/ScriptAssemblies/Assembly-CSharp.pdb","index":333,"changes":[{"key":"Action","value":"copy \"Library\\Bee\\artifacts\\1900b0aEDbg.dag\\Assembly-CSharp.pdb\" \"Library\\ScriptAssemblies\\Assembly-CSharp.pdb\" && copy /b \"Library\\ScriptAssemblies\\Assembly-CSharp.pdb\" +,, \"Library\\ScriptAssemblies\\Assembly-CSharp.pdb\" ","oldvalue":""},{"key":"InputFileList","value":["Library\\Bee\\artifacts\\1900b0aEDbg.dag\\Assembly-CSharp.pdb"],"oldvalue":[],"dependency":"explicit"}]}
 {"msg":"noderesult","processed_node_count":330,"amount_of_nodes_ever_queued":333,"annotation":"CopyTool Library/ScriptAssemblies/Assembly-CSharp.dll","index":332,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\Assembly-CSharp.dll"}
 {"msg":"noderesult","processed_node_count":331,"amount_of_nodes_ever_queued":333,"annotation":"CopyTool Library/ScriptAssemblies/Assembly-CSharp.pdb","index":333,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\Assembly-CSharp.pdb"}
+<<<<<<< HEAD
+>>>>>>> parent of 7865c4c (Clean-up)
+=======
 >>>>>>> parent of 7865c4c (Clean-up)

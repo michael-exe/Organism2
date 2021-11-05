@@ -3,6 +3,7 @@
 "traceEvents":[
 { "cat":"", "pid":1, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"tundra" } }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ,{ "pid":1, "tid":0, "ts":348125991367, "dur":2171, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":2, "detail":"" }}
 ,{ "pid":1, "tid":0, "ts":348125993538, "dur":1320, "ph":"X", "name": "DriverInitData",  "args": { "durationMS":1, "detail":"" }}
 ,{ "pid":1, "tid":0, "ts":348125995123, "dur":396, "ph":"X", "name": "Tundra",  "args": { "durationMS":0, "detail":"RemoveStaleOutputs" }}
@@ -394,6 +395,8 @@
 ,{ "pid":1, "tid":6, "ts":348126071803, "dur":2314, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":2, "detail":"" }}
 ,{ "pid":1, "tid":6, "ts":348126074117, "dur":17970, "ph":"X", "name": "Exiting",  "args": { "durationMS":18, "detail":"BuildLoop" }}
 =======
+=======
+>>>>>>> parent of 7865c4c (Clean-up)
 ,{ "pid":1, "tid":0, "ts":201570084380, "dur":2385, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":2, "detail":"" }}
 ,{ "pid":1, "tid":0, "ts":201570086766, "dur":1509, "ph":"X", "name": "DriverInitData",  "args": { "durationMS":2, "detail":"" }}
 ,{ "pid":1, "tid":0, "ts":201570088455, "dur":418, "ph":"X", "name": "Tundra",  "args": { "durationMS":0, "detail":"RemoveStaleOutputs" }}
@@ -789,6 +792,9 @@
 ,{ "pid":1, "tid":6, "ts":201570179510, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "durationMS":0, "detail":"CopyTool Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.pdb" }}
 ,{ "pid":1, "tid":6, "ts":201570179599, "dur":253071, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":253, "detail":"" }}
 ,{ "pid":1, "tid":6, "ts":201570432670, "dur":25034, "ph":"X", "name": "Exiting",  "args": { "durationMS":25, "detail":"BuildLoop" }}
+<<<<<<< HEAD
+>>>>>>> parent of 7865c4c (Clean-up)
+=======
 >>>>>>> parent of 7865c4c (Clean-up)
 
 ]

@@ -25,6 +25,7 @@ public class AttachmentController : MonoBehaviour
     void Update()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         //DETECTOR(ext)  
 
         //UR_Attach();
@@ -37,6 +38,8 @@ public class AttachmentController : MonoBehaviour
         ALL_Attach(DR_Detector.position,DR_Holder);
         ALL_Attach(DL_Detector.position,DL_Holder);
 =======
+=======
+>>>>>>> parent of 7865c4c (Clean-up)
         //DETECTOR(ext)
         
         UR_Attach();
@@ -44,6 +47,9 @@ public class AttachmentController : MonoBehaviour
         DR_Attach();
         DL_Attach();
 
+<<<<<<< HEAD
+>>>>>>> parent of 7865c4c (Clean-up)
+=======
 >>>>>>> parent of 7865c4c (Clean-up)
     }
 
@@ -126,10 +132,16 @@ public class AttachmentController : MonoBehaviour
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 //https://youtu.be/U8gUnpeaMbQ Snake
 //https://youtu.be/1uq43EIzo-U Grab
 //https://youtu.be/cIeWhztKyAg Asteroids
 //https://answers.unity.com/questions/1455956/using-function-return-in-if-statement.html 
+=======
+    //https://youtu.be/U8gUnpeaMbQ Snake
+    //https://youtu.be/1uq43EIzo-U Grab
+    //https://youtu.be/cIeWhztKyAg Asteroids
+>>>>>>> parent of 7865c4c (Clean-up)
 =======
     //https://youtu.be/U8gUnpeaMbQ Snake
     //https://youtu.be/1uq43EIzo-U Grab
