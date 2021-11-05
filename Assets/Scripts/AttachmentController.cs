@@ -24,15 +24,21 @@ public class AttachmentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //DETECTOR(ext)        
-        UR_Attach();
-        UL_Attach();
-        DR_Attach();
-        DL_Attach();
+        //DETECTOR(ext)  
+
+        //UR_Attach();
+        //UL_Attach();
+       // DR_Attach();
+       // DL_Attach();
+
+        ALL_Attach(UR_Detector.position,UR_Holder);
+        ALL_Attach(UL_Detector.position,UL_Holder);
+        ALL_Attach(DR_Detector.position,DR_Holder);
+        ALL_Attach(DL_Detector.position,DL_Holder);
     }
 
     //DETECTOR(ext) referencing HOLDER(int)
-    void UR_Attach()
+    /*void UR_Attach()
     {
         RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
         //Not really Ext2Int anymore
@@ -43,6 +49,8 @@ public class AttachmentController : MonoBehaviour
             Ext2Int.collider.transform.parent = UR_Holder;
             Ext2Int.collider.transform.position = UR_Holder.position;
             Ext2Int.collider.tag = "Int_Molecule";
+
+             FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
         }
 
     }
@@ -55,6 +63,8 @@ public class AttachmentController : MonoBehaviour
             Ext2Int.collider.transform.parent = UL_Holder;
             Ext2Int.collider.gameObject.transform.position = UL_Holder.position;
             Ext2Int.collider.gameObject.tag = "Int_Molecule";
+
+            FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
         }
     }
     void DR_Attach()
@@ -66,6 +76,8 @@ public class AttachmentController : MonoBehaviour
             Ext2Int.collider.transform.parent = DR_Holder;
             Ext2Int.collider.gameObject.transform.position = DR_Holder.position;
             Ext2Int.collider.gameObject.tag = "Int_Molecule";
+
+             FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
         }
     }
     void DL_Attach()
@@ -78,6 +90,23 @@ public class AttachmentController : MonoBehaviour
             Ext2Int.collider.transform.parent = DL_Holder;
             Ext2Int.collider.gameObject.transform.position = DL_Holder.position;
             Ext2Int.collider.gameObject.tag = "Int_Molecule";
+
+             FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
+        }
+    } */
+
+
+    void ALL_Attach(Vector2 pos,Transform _holder){
+
+    RaycastHit2D Ext2Int = Physics2D.Raycast(pos, Vector2.zero, 0);
+
+        if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
+        {
+            Ext2Int.collider.transform.parent = _holder;
+            Ext2Int.collider.gameObject.transform.position = _holder.position;
+            Ext2Int.collider.gameObject.tag = "Int_Molecule";
+
+             FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
         }
     }
 }
