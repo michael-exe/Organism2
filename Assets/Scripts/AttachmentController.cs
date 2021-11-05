@@ -24,6 +24,7 @@ public class AttachmentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         //DETECTOR(ext)  
 
         //UR_Attach();
@@ -35,14 +36,26 @@ public class AttachmentController : MonoBehaviour
         ALL_Attach(UL_Detector.position,UL_Holder);
         ALL_Attach(DR_Detector.position,DR_Holder);
         ALL_Attach(DL_Detector.position,DL_Holder);
+=======
+        //DETECTOR(ext)
+        
+        UR_Attach();
+        UL_Attach();
+        DR_Attach();
+        DL_Attach();
+
+>>>>>>> parent of 7865c4c (Clean-up)
     }
 
     //DETECTOR(ext) referencing HOLDER(int)
     /*void UR_Attach()
     {
+        
+
         RaycastHit2D Ext2Int = Physics2D.Raycast(UR_Detector.position, Vector2.zero, -0);
         //Not really Ext2Int anymore
         
+
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {
             //Destroy(Ext2Int.collider.gameObject);
@@ -108,9 +121,17 @@ public class AttachmentController : MonoBehaviour
 
              FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
         }
+
     }
+
 }
+<<<<<<< HEAD
 //https://youtu.be/U8gUnpeaMbQ Snake
 //https://youtu.be/1uq43EIzo-U Grab
 //https://youtu.be/cIeWhztKyAg Asteroids
 //https://answers.unity.com/questions/1455956/using-function-return-in-if-statement.html 
+=======
+    //https://youtu.be/U8gUnpeaMbQ Snake
+    //https://youtu.be/1uq43EIzo-U Grab
+    //https://youtu.be/cIeWhztKyAg Asteroids
+>>>>>>> parent of 7865c4c (Clean-up)
