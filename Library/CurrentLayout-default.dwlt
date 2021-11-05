@@ -122,6 +122,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 80
 =======
   controlID: 17
@@ -129,6 +130,9 @@ MonoBehaviour:
 =======
   controlID: 17
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+  controlID: 80
+>>>>>>> parent of c00b010 (One molecule system)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,6 +318,7 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 57
 =======
   controlID: 102
@@ -321,6 +326,9 @@ MonoBehaviour:
 =======
   controlID: 102
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+  controlID: 57
+>>>>>>> parent of c00b010 (One molecule system)
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,6 +356,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 58
 =======
   controlID: 103
@@ -355,6 +364,9 @@ MonoBehaviour:
 =======
   controlID: 103
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+  controlID: 58
+>>>>>>> parent of c00b010 (One molecule system)
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -460,6 +472,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 084d0000
     m_LastClickedID: 19720
     m_ExpandedIDs: 00000000fc4c000000ca9a3b
@@ -473,6 +486,11 @@ MonoBehaviour:
     m_LastClickedID: 19662
     m_ExpandedIDs: 00000000c24c0000
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+    m_SelectedIDs: 084d0000
+    m_LastClickedID: 19720
+    m_ExpandedIDs: 00000000fc4c000000ca9a3b
+>>>>>>> parent of c00b010 (One molecule system)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,6 +520,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000fc4c0000
 =======
     m_ExpandedIDs: 00000000c24c0000
@@ -509,6 +528,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000c24c0000
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+    m_ExpandedIDs: 00000000fc4c0000
+>>>>>>> parent of c00b010 (One molecule system)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -538,6 +560,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 7865c4c (Clean-up)
@@ -545,6 +568,8 @@ MonoBehaviour:
     m_LastClickedInstanceID: 1738
     m_HadKeyboardFocusLastEvent: 1
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+>>>>>>> parent of c00b010 (One molecule system)
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -649,6 +674,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 964c0000
       m_LastClickedID: 19606
       m_ExpandedIDs: 28fbffff784c0000ca4c0000
@@ -662,6 +688,11 @@ MonoBehaviour:
       m_LastClickedID: 19594
       m_ExpandedIDs: 1edcffff20dcffffd8efffffdeefffff5af0ffff60f0ffff42fbffffa04b0000c04b0000e04b0000384c00008a4c0000
 >>>>>>> parent of 7865c4c (Clean-up)
+=======
+      m_SelectedIDs: 964c0000
+      m_LastClickedID: 19606
+      m_ExpandedIDs: 28fbffff784c0000ca4c0000
+>>>>>>> parent of c00b010 (One molecule system)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
