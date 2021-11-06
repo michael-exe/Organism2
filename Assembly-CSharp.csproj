@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\AttachmentController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1869869035208250384}
   m_Layer: 0
   m_Name: Int_Molecule
-  m_TagString: Int_Molecule
+  m_TagString: Ext_Molecule
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
