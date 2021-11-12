@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     Vector2 movement;
 
     public float throwSpeed;        
-    public GameObject _lastObjectGrabed;
+    public List<GameObject> objectGrabed;
 
     void Update()
     {
@@ -19,13 +19,14 @@ public class Player : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(_lastObjectGrabed && Input.GetKeyDown(KeyCode.X)) {
+        if(objectGrabed.Count >= 1 && Input.GetKeyDown(KeyCode.X)) {
             
-            _lastObjectGrabed.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            _lastObjectGrabed.GetComponent<Rigidbody2D>().AddForce(_lastObjectGrabed.transform.parent.up*throwSpeed);
-            _lastObjectGrabed.transform.SetParent(null);
-            Destroy(_lastObjectGrabed,3f);
-            _lastObjectGrabed= null;
+            var obj = objectGrabed[objectGrabed.Count -1];
+            obj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            obj.GetComponent<Rigidbody2D>().AddForce(obj.transform.parent.up*throwSpeed);
+            obj.transform.SetParent(null);
+            Destroy(obj,3f);
+            objectGrabed.RemoveAt(objectGrabed.Count-1);
         }
     }
 

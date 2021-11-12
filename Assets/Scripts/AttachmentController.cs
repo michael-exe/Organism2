@@ -100,15 +100,15 @@ public class AttachmentController : MonoBehaviour
 
     RaycastHit2D Ext2Int = Physics2D.Raycast(pos, Vector2.zero, 0);
 
+        // if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         if (Ext2Int.collider != null && Ext2Int.collider.tag == "Ext_Molecule")
         {
             Ext2Int.collider.transform.parent = _holder;
             Ext2Int.collider.gameObject.transform.position = _holder.position;
             Ext2Int.collider.gameObject.tag = "Int_Molecule";
 
-             FindObjectOfType<Player>()._lastObjectGrabed = Ext2Int.collider.gameObject;
+             FindObjectOfType<Player>().objectGrabed.Add(Ext2Int.collider.gameObject);
         }
-
     }
 }
 //https://youtu.be/U8gUnpeaMbQ Snake
