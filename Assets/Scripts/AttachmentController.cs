@@ -15,15 +15,9 @@ public class AttachmentController : MonoBehaviour
     public Transform DR_Holder;
     public Transform DL_Holder;
 
-    private void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-
         ALL_Attach(UR_Detector.position,UR_Holder);
         ALL_Attach(UL_Detector.position,UL_Holder);
         ALL_Attach(DR_Detector.position,DR_Holder);

@@ -56,7 +56,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\AttachmentController.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\Scripts\SubstanceGFX.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
