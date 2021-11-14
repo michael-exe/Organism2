@@ -14,6 +14,8 @@ public class AttachmentController : MonoBehaviour
     public Transform UL_Holder;
     public Transform DR_Holder;
     public Transform DL_Holder;
+    
+    public Collider2D MembraneCollider;
 
     // Update is called once per frame
     void Update()
@@ -35,6 +37,19 @@ public class AttachmentController : MonoBehaviour
             Ext2Int.collider.gameObject.tag = "Int_Molecule";
 
              FindObjectOfType<Player>().objectGrabed.Add(Ext2Int.collider.gameObject);
+
+        }
+    }
+
+    void Level_1 ()
+    {
+        if (UR_Holder.childCount == 1 && UL_Holder.childCount == 1 && DR_Holder.childCount == 1 && DL_Holder.childCount == 1)
+        {
+            MembraneCollider.enabled = true;
+        }
+        else 
+        {
+            MembraneCollider.enabled = false;
         }
     }
 }
