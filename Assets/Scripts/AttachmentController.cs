@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AttachmentController : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class AttachmentController : MonoBehaviour
         ALL_Attach(UL_Detector.position,UL_Holder);
         ALL_Attach(DR_Detector.position,DR_Holder);
         ALL_Attach(DL_Detector.position,DL_Holder);
+        Level_1();
+        //Win();
     }
 
     void ALL_Attach(Vector2 pos,Transform _holder){
@@ -52,8 +55,19 @@ public class AttachmentController : MonoBehaviour
             MembraneCollider.enabled = false;
         }
     }
+
+    //void Win()
+    //{
+    //    if (MembraneCollider != null && MembraneCollider.tag == "Int_Molecule")
+    //    {
+    //        SceneManager.LoadScene("Organism");
+    //    }
+
+    //}
 }
 //https://youtu.be/U8gUnpeaMbQ Snake
 //https://youtu.be/1uq43EIzo-U Grab
 //https://youtu.be/cIeWhztKyAg Asteroids
-//https://answers.unity.com/questions/1455956/using-function-return-in-if-statement.html 
+//https://youtu.be/VbZ9_C4-Qbo GameOver
+// First of all it is very bad practice to execute GetComponent or FindGameObjectWithTag inside the Update method. Please do this on Awake or Start.
+//https://answers.unity.com/questions/1169975/referencing-variable-from-another-script-on-anothe.html

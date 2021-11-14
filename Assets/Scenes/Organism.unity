@@ -659,6 +659,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: MembraneCollider
+      value: 
+      objectReference: {fileID: 1093657264}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
 --- !u!1001 &619324057
@@ -724,6 +732,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: MembraneCollider
+      value: 
+      objectReference: {fileID: 1093657264}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
 --- !u!1 &641626978
@@ -1219,7 +1235,7 @@ GameObject:
   - component: {fileID: 1093657264}
   m_Layer: 0
   m_Name: MembraneDoorLock
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1534,6 +1550,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: MembraneCollider
+      value: 
+      objectReference: {fileID: 1093657264}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
 --- !u!1 &1374583289
@@ -1803,7 +1827,7 @@ GameObject:
   - component: {fileID: 1567286343}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2653,8 +2677,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 238363139511374806, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 238363139511374806, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
       propertyPath: m_BodyType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 238363139511374806, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 238363139511374806, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 238363139511374806, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
       propertyPath: m_CollisionDetection
@@ -2712,6 +2748,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155940241454935255, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
+      propertyPath: MembraneCollider
+      value: 
+      objectReference: {fileID: 1093657264}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb91334ac05a324896a17ad6754d1e5, type: 3}
 --- !u!1 &9071461501801737102

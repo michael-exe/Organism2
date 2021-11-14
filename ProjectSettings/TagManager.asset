@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ext_Molecule
   - Int_Molecule
+  - Door
   layers:
   - Default
   - TransparentFX
