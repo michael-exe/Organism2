@@ -16,7 +16,7 @@ public class AttachmentController : MonoBehaviour
     public Transform DR_Holder;
     public Transform DL_Holder;
     
-    public Collider2D MembraneCollider;
+    public Collider2D membraneCollider;
 
     // Update is called once per frame
     void Update()
@@ -48,11 +48,12 @@ public class AttachmentController : MonoBehaviour
     {
         if (UR_Holder.childCount == 1 && UL_Holder.childCount == 1 && DR_Holder.childCount == 1 && DL_Holder.childCount == 1)
         {
-            MembraneCollider.enabled = true;
+            membraneCollider.enabled = true;
+            //Debug.Log("collision enabled"); It just works innit
         }
         else 
         {
-            MembraneCollider.enabled = false;
+            membraneCollider.enabled = false;
         }
     }
 

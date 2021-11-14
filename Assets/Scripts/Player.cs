@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     public float throwSpeed;        
     public List<GameObject> objectGrabed;
+
+    //public Collider2D membraneCollider;
 
     void Update()
     {
@@ -37,13 +39,14 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Door")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D mycollision)
+    //{
+    //    if (membraneCollider == enabled)
+    //    {
+    //        Debug.Log("Collision");
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //    }
+    //}
     //https://youtu.be/whzomFgjT50 Movement
     //https://youtu.be/gAB64vfbrhI Collision
 
