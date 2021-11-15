@@ -55,11 +55,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\AttachmentController.cs" />
-    <Compile Include="Assets\Win.cs" />
-    <Compile Include="Assets\Door.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\SubstanceGFX.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\Level1.cs" />
+=======
+    <Compile Include="Assets\Win.cs" />
+>>>>>>> parent of b1a67cf (Last attempt)
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

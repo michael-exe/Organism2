@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-0.037436917424201968,"y":-6.735641956329346,"z":-3.4247536659240724},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":7.5615315437316898,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":1.8067312240600587,"y":-11.297887802124024,"z":19.99637222290039},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":12.766151428222657,"orthographic":true}
+>>>>>>> parent of b1a67cf (Last attempt)
