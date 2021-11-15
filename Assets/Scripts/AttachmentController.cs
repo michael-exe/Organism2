@@ -15,7 +15,7 @@ public class AttachmentController : MonoBehaviour
     public Transform UL_Holder;
     public Transform DR_Holder;
     public Transform DL_Holder;
-    
+
     public Collider2D membraneCollider;
 
     // Update is called once per frame
@@ -25,8 +25,7 @@ public class AttachmentController : MonoBehaviour
         ALL_Attach(UL_Detector.position,UL_Holder);
         ALL_Attach(DR_Detector.position,DR_Holder);
         ALL_Attach(DL_Detector.position,DL_Holder);
-        Level_1();
-        //Win();
+        //Level_1();
     }
 
     void ALL_Attach(Vector2 pos,Transform _holder){
@@ -44,14 +43,14 @@ public class AttachmentController : MonoBehaviour
         }
     }
 
-    void Level_1 ()
+    void Level_1()
     {
         if (UR_Holder.childCount == 1 && UL_Holder.childCount == 1 && DR_Holder.childCount == 1 && DL_Holder.childCount == 1)
         {
             membraneCollider.enabled = true;
             //Debug.Log("collision enabled"); It just works innit
         }
-        else 
+        else
         {
             membraneCollider.enabled = false;
         }
@@ -70,5 +69,5 @@ public class AttachmentController : MonoBehaviour
 //https://youtu.be/1uq43EIzo-U Grab
 //https://youtu.be/cIeWhztKyAg Asteroids
 //https://youtu.be/VbZ9_C4-Qbo GameOver
-// First of all it is very bad practice to execute GetComponent or FindGameObjectWithTag inside the Update method. Please do this on Awake or Start.
+// It is very bad practice to execute GetComponent or FindGameObjectWithTag inside the Update method. Please do this on Awake or Start.
 //https://answers.unity.com/questions/1169975/referencing-variable-from-another-script-on-anothe.html

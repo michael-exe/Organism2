@@ -796,7 +796,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0311284, y: 1}
+    m_SensorSize: {x: 2.0057805, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2852,4 +2852,4 @@ MonoBehaviour:
   UL_Holder: {fileID: 1959205263}
   DR_Holder: {fileID: 1994806188}
   DL_Holder: {fileID: 245617653}
-  membraneCollider: {fileID: 1093657264}
+  membraneCollider: {fileID: 0}

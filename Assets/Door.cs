@@ -5,11 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D mycollision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (mycollision.collider.tag == "Player")
+        if (collider != null && collider.tag == "Player")
         {
-            Debug.Log("I Have been touched");
             SceneManager.LoadScene("Organism");
         }
     }
